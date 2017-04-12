@@ -22,7 +22,30 @@ public class Dice {
 	}
 
 	//write a method to determine if two Dice objects are equals
-	
+	public boolean isEquals(Dice other){
+		return this.spots==other.spots;
+		}
 	//write a method that prints a Die
+	
+	public String toString(){
+		return String.valueOf(this.spots);
+	}
+	
+	public int numDoubs(int rolls){
+		int c = 0;
+		int x = 0;
+		Dice d = new Dice();
+		Dice d1 = new Dice();
+		
+		for(int y = 0; y<rolls;y++){
+			d.roll();
+			d1.roll();
+			if(d.isEquals(d1)){
+				c++;
+			} 
+
+		}
+		return c;
+	}
 
 }
